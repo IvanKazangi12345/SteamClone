@@ -1,8 +1,14 @@
-function HoverImageN({ defaultSrc, hoverSrc, alt }) {
+import './Header.css';
+import React from "react";
+import { useEffect, useState } from "react";
+import { Link } from "react-router";
+
+
+function HoverImageN({ defaultSrc, hoverSrc, alt, to }) {
     const [src, setSrc] = useState(defaultSrc);
 
     return (
-        <a href="#" className="navElement">
+        <Link to={to} className="navElement">
             <img
                 src={src}
                 alt={alt}
@@ -10,11 +16,11 @@ function HoverImageN({ defaultSrc, hoverSrc, alt }) {
                 onMouseLeave={() => setSrc(defaultSrc)}
                 style={{ transition: "0.1s ease" }}
             />
-        </a>
+        </Link>
     );
 }
 
-export function NavigationN(props) {
+export function Navigation(props) {
     const {
         logoImg,
         discoverLink,
@@ -50,24 +56,24 @@ export function NavigationN(props) {
                 <nav>
                     <div className="logoWithFirstElements">
                         <div className="logo">
-                            <a href="#" className="navElement">
+                            <Link to="/main" className="navElement">
                                 <img src={logoImg} alt="Logo" />
-                            </a>
+                            </Link>
                         </div>
 
                         <div className="aAndInput">
                             {!isMobile && (
                                 <>
                                     <div className="firstElements">
-                                        <a href={discoverLink} className="navElement DSN" id="current">
+                                        <Link to="/main" className="navElement DSN" id="current">
                                             Discover
-                                        </a>
-                                        <a href={supportLink} className="navElement DSN">
+                                        </Link>
+                                        <Link to="/support" className="navElement DSN">
                                             Support
-                                        </a>
-                                        <a href={newsLink} className="navElement DSN">
+                                        </Link>
+                                        <Link to="/news" className="navElement DSN">
                                             News
-                                        </a>
+                                        </Link>
                                     </div>
 
                                     <div className="searchDiv">
@@ -83,16 +89,19 @@ export function NavigationN(props) {
 
                     <div className="lastElements">
                         <HoverImageN
+                            to="/profile"
                             defaultSrc={profileImg}
                             hoverSrc={profileImg.replace(".png", "G.png")}
                             alt="Profile"
                         />
                         <HoverImageN
+                            to="/wishlist"
                             defaultSrc={wishlistImg}
                             hoverSrc={wishlistImg.replace(".png", "G.png")}
                             alt="Wishlist"
                         />
                         <HoverImageN
+                            to="/cart"
                             defaultSrc={cartImg}
                             hoverSrc={cartImg.replace(".png", "G.png")}
                             alt="Cart"
@@ -102,9 +111,9 @@ export function NavigationN(props) {
                             hoverSrc={languageImg.replace(".png", "G.png")}
                             alt="Language"
                         />
-                        <a href="#" className="navElement">
+                         <Link to="#"  className="navElement">
                             <button id="signIn">{signInText}</button>
-                        </a>
+                         </Link> 
 
                         {!isMobile && (
                             <a href="#" className="navElement">
@@ -144,18 +153,19 @@ export function NavigationN(props) {
     );
 }
 
-export function Navigation() {
-    <NavigationN
-        logoImg="/images/imagesNavigation/Logo.png"
-        discoverLink="#"
-        supportLink="#"
-        newsLink="#"
-        searchIcon="/images/imagesNavigation/logoLens.png"
-        profileImg="/images/imagesNavigation/profile.png"
-        wishlistImg="/images/imagesNavigation/wishlist.png"
-        cartImg="/images/imagesNavigation/cart.png"
-        languageImg="/images/imagesNavigation/languege.png"
-        signInText="Sign in"
-        downloadText="Download"
-    />
+export function Header() {
+    return (
+        <header>
+            <Navigation
+                logoImg="/images/imagesNavigation/Logo.png"
+                searchIcon="/images/imagesNavigation/logoLens.png"
+                profileImg="/images/imagesNavigation/profile.png"
+                wishlistImg="/images/imagesNavigation/wishlist.png"
+                cartImg="/images/imagesNavigation/cart.png"
+                languageImg="/images/imagesNavigation/languege.png"
+                signInText="Sign in"
+                downloadText="Download"
+            />
+        </header>
+    );
 }

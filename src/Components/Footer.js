@@ -1,3 +1,7 @@
+import './Footer.css';
+import React from "react";
+import { useState } from "react";
+
 function HoverImageF({ defaultSrc, hoverSrc, alt, id }) {
     const [src, setSrc] = useState(defaultSrc);
 
@@ -73,22 +77,25 @@ export function FooterF(props) {
 }
 
 export function Footer() {
-    <Footer
-        facebookImg="/images/imagesFooter/facebook.png"
-        twitterImg="/images/imagesFooter/twitter.png"
-        youtubeImg="/images/imagesFooter/youtube.png"
-        arrowImg="images/imagesFooter/arrow.png"
-        logoImg="images/imagesFooter/logo.png"
-        footerText="© 2025 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries. VAT included in all prices where applicable"
-        footerLinks={[
-            { href: "#", text: "Terms of service" },
-            { href: "#", text: "Jobs" },
-            { href: "#", text: "Rules" },
-            { href: "#", text: "Contracts" },
-            { href: "#", text: "Gift cards" },
-            { href: "#", text: "Facebook" },
-            { href: "#", text: "Twitter" }
-        ]}
-    />
-
+    return (
+        <footer>
+            <FooterF
+                facebookImg="/images/imagesFooter/facebook.png"
+                twitterImg="/images/imagesFooter/twitter.png"
+                youtubeImg="/images/imagesFooter/youtube.png"
+                arrowImg="images/imagesFooter/arrow.png"
+                logoImg="images/imagesFooter/logo.png"
+                footerText="© 2025 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries. VAT included in all prices where applicable"
+                footerLinks={[
+                    { href: "#", text: "Terms of service" },
+                    { href: "#", text: "Jobs" },
+                    { href: "#", text: "Rules" },
+                    { href: "#", text: "Contracts" },
+                    { href: "#", text: "Gift cards" },
+                    { href: "#", text: "Facebook" },
+                    { href: "#", text: "Twitter" }
+                ]}
+            />
+        </footer>
+    );
 }

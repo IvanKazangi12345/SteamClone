@@ -1,6 +1,8 @@
 import './Main.css';
 import React from "react";
-import { useState, useEffect } from "react";
+import { Footer } from "./Footer";
+import { Header } from "./Header";
+import { LastNavigation } from "./LastNavigation";
 
 export function ApexLegends({ imageSrc, newSeasonText, freeText, buttonText, images }) {
     return (
@@ -315,7 +317,6 @@ export function RecentlyUpdated({ games }) {
     );
 }
 
-
 export function NowOnTheStore(props) {
     const { products } = props;
 
@@ -344,320 +345,58 @@ export function NowOnTheStore(props) {
     );
 }
 
-function HoverImageN({ defaultSrc, hoverSrc, alt }) {
-    const [src, setSrc] = useState(defaultSrc);
-
-    return (
-        <a href="#" className="navElement">
-            <img
-                src={src}
-                alt={alt}
-                onMouseEnter={() => setSrc(hoverSrc)}
-                onMouseLeave={() => setSrc(defaultSrc)}
-                style={{ transition: "0.1s ease" }}
-            />
-        </a>
-    );
-}
-
-export function Navigation(props) {
-    const {
-        logoImg,
-        discoverLink,
-        supportLink,
-        newsLink,
-        searchIcon,
-        profileImg,
-        wishlistImg,
-        cartImg,
-        languageImg,
-        signInText,
-        downloadText,
-    } = props;
-
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggleMenu = () => setIsOpen(!isOpen);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth <= 767);
-            if (window.innerWidth > 767) {
-                setIsOpen(false);
-            }
-        };
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
-
-    return (
-        <div>
-            <div className="navBack">
-                <nav>
-                    <div className="logoWithFirstElements">
-                        <div className="logo">
-                            <a href="#" className="navElement">
-                                <img src={logoImg} alt="Logo" />
-                            </a>
-                        </div>
-
-                        <div className="aAndInput">
-                            {!isMobile && (
-                                <>
-                                    <div className="firstElements">
-                                        <a href={discoverLink} className="navElement DSN" id="current">
-                                            Discover
-                                        </a>
-                                        <a href={supportLink} className="navElement DSN">
-                                            Support
-                                        </a>
-                                        <a href={newsLink} className="navElement DSN">
-                                            News
-                                        </a>
-                                    </div>
-
-                                    <div className="searchDiv">
-                                        <div id="logoLens">
-                                            <img src={searchIcon} alt="Search" />
-                                        </div>
-                                        <input className="search" type="text" placeholder="Search store" />
-                                    </div>
-                                </>
-                            )}
-                        </div>
-                    </div>
-
-                    <div className="lastElements">
-                        <HoverImageN
-                            defaultSrc={profileImg}
-                            hoverSrc={profileImg.replace(".png", "G.png")}
-                            alt="Profile"
-                        />
-                        <HoverImageN
-                            defaultSrc={wishlistImg}
-                            hoverSrc={wishlistImg.replace(".png", "G.png")}
-                            alt="Wishlist"
-                        />
-                        <HoverImageN
-                            defaultSrc={cartImg}
-                            hoverSrc={cartImg.replace(".png", "G.png")}
-                            alt="Cart"
-                        />
-                        <HoverImageN
-                            defaultSrc={languageImg}
-                            hoverSrc={languageImg.replace(".png", "G.png")}
-                            alt="Language"
-                        />
-
-                        <a href="#" className="navElement">
-                            <button id="signIn">{signInText}</button>
-                        </a>
-
-                        {!isMobile && (
-                            <a href="#" className="navElement">
-                                <button id="download">{downloadText}</button>
-                            </a>
-                        )}
-
-                        {isMobile && (
-                            <div className="burger" onClick={toggleMenu}>
-                                <div className="line" />
-                                <div className="line" />
-                                <div className="line" />
-                            </div>
-                        )}
-                    </div>
-                </nav>
-
-                {isMobile && isOpen && (
-                    <div className="burgerMenu">
-                        <a href={discoverLink} className="burgerLink">Discover</a>
-                        <a href={supportLink} className="burgerLink">Support</a>
-                        <a href={newsLink} className="burgerLink">News</a>
-                        <button id="downloadBurger">{downloadText}</button>
-                    </div>
-                )}
-            </div>
-
-            {isMobile && (
-                <div className="searchDivMobile">
-                    <div id="logoLens">
-                        <img src={searchIcon} alt="Search" />
-                    </div>
-                    <input className="search" type="text" placeholder="Search store" />
-                </div>
-            )}
-        </div>
-    );
-}
-
-export function LastNavigation(props) {
-    const {
-        previousArrowImg,
-        nextArrowImg,
-        pageLinks
-    } = props;
-
-    return (
-        <div className="wrapLastNavigation">
-            <div className="LastNavigation">
-                <div className="arrow" id="arrowPrevious">
-                    <a href="#"><img src={previousArrowImg} alt="Previous" /></a>
-                    <a href="#">Previous</a>
-                </div>
-                <div className="pages">
-                    {pageLinks.map((page, index) => (
-                        <a key={index} href={page.href}>{page.text}</a>
-                    ))}
-                </div>
-                <div className="arrow" id="arrowNext">
-                    <a href="#">Next</a>
-                    <a href="#"><img src={nextArrowImg} alt="Next" /></a>
-                </div>
-            </div>
-        </div>
-    );
-}
-
-function HoverImageF({ defaultSrc, hoverSrc, alt, id }) {
-    const [src, setSrc] = useState(defaultSrc);
-
-    return (
-        <img
-            src={src}
-            id={id}
-            alt={alt}
-            onMouseEnter={() => setSrc(hoverSrc)}
-            onMouseLeave={() => setSrc(defaultSrc)}
-            style={{ transition: "0.1s ease" }}
-        />
-    );
-}
-
-export function Footer(props) {
-    const {
-        facebookImg,
-        twitterImg,
-        youtubeImg,
-        arrowImg,
-        logoImg,
-        footerText,
-        footerLinks,
-    } = props;
-
-    return (
-        <div className="footer">
-            <div className="socialAndArrow">
-                <div className="socialImages">
-                    <HoverImageF
-                        defaultSrc={facebookImg}
-                        hoverSrc={facebookImg.replace(".png", "G.png")}
-                        id="facebook"
-                        alt="Facebook"
-                    />
-                    <HoverImageF
-                        defaultSrc={twitterImg}
-                        hoverSrc={twitterImg.replace(".png", "G.png")}
-                        id="twitter"
-                        alt="Twitter"
-                    />
-                    <HoverImageF
-                        defaultSrc={youtubeImg}
-                        hoverSrc={youtubeImg.replace(".png", "G.png")}
-                        id="youtube"
-                        alt="YouTube"
-                    />
-                </div>
-                <a href="#">
-                    <HoverImageF
-                        defaultSrc={arrowImg}
-                        hoverSrc={arrowImg.replace(".png", "G.png")}
-                        alt="Arrow"
-                    />
-                </a>
-            </div>
-
-            <div className="textAndLogo">
-                <p className="footerText">{footerText}</p>
-                <img src={logoImg} className="footerLogo" alt="Logo" />
-            </div>
-
-            <div className="footerLinks">
-                {footerLinks.map((link, index) => (
-                    <a key={index} href={link.href} className="footerLink">
-                        {link.text}
-                    </a>
-                ))}
-            </div>
-        </div>
-    );
-}
-
 export function Main() {
     return (
         <div className="body">
-            <header>
-                <Navigation
-                    logoImg="/images/imagesNavigation/Logo.png"
-                    discoverLink="#"
-                    supportLink="#"
-                    newsLink="#"
-                    searchIcon="/images/imagesNavigation/logoLens.png"
-                    profileImg="/images/imagesNavigation/profile.png"
-                    wishlistImg="/images/imagesNavigation/wishlist.png"
-                    cartImg="/images/imagesNavigation/cart.png"
-                    languageImg="/images/imagesNavigation/languege.png"
-                    signInText="Sign in"
-                    downloadText="Download"
-                />
-            </header>
+            <Header></Header>
             <main>
-                <section><ApexLegends
-                    imageSrc="/images/imagesHome/Apex.png"
-                    newSeasonText="NEW SEASON"
-                    freeText="FREE"
-                    buttonText="Learn more"
-                    images={[
-                        "/images/imagesHome/photo_1.png",
-                        "/images/imagesHome/photo_2.png"
-                    ]}
-                />
+                <section>
+                    <ApexLegends
+                        imageSrc="/images/imagesHome/Apex.png"
+                        newSeasonText="NEW SEASON"
+                        freeText="FREE"
+                        buttonText="Learn more"
+                        images={[
+                            "/images/imagesHome/photo_1.png",
+                            "/images/imagesHome/photo_2.png"
+                        ]}
+                    />
                 </section>
-                <section><DiscoverSomethingNew
-                    items={[
-                        {
-                            imageSrc: "/images/imagesHome/TheEndOfTheSun.png",
-                            name: "The End of the Sun",
-                            price: "UAH 515"
-                        },
-                        {
-                            imageSrc: "/images/imagesHome/ApexLegends.png",
-                            name: "Apex Legends",
-                            price: "Free"
-                        },
-                        {
-                            imageSrc: "/images/imagesHome/TheWereCleaner.png",
-                            name: "The WereCleaner",
-                            price: "UAH 325"
-                        },
-                        {
-                            imageSrc: "/images/imagesHome/TheEmberlands.png",
-                            name: "The EmberLands",
-                            price: "UAH 355"
-                        },
-                        {
-                            imageSrc: "/images/imagesHome/KingdomComeDeliverance.png",
-                            name: "Kingdom Come Deliverance II",
-                            price: "UAH 1030"
-                        },
-                        {
-                            imageSrc: "/images/imagesHome/FinalFantasy.png",
-                            name: "Final Fantasy VII",
-                            price: "UAH 975"
-                        }
-                    ]}
-                />
+                <section>
+                    <DiscoverSomethingNew
+                        items={[
+                            {
+                                imageSrc: "/images/imagesHome/TheEndOfTheSun.png",
+                                name: "The End of the Sun",
+                                price: "UAH 515"
+                            },
+                            {
+                                imageSrc: "/images/imagesHome/ApexLegends.png",
+                                name: "Apex Legends",
+                                price: "Free"
+                            },
+                            {
+                                imageSrc: "/images/imagesHome/TheWereCleaner.png",
+                                name: "The WereCleaner",
+                                price: "UAH 325"
+                            },
+                            {
+                                imageSrc: "/images/imagesHome/TheEmberlands.png",
+                                name: "The EmberLands",
+                                price: "UAH 355"
+                            },
+                            {
+                                imageSrc: "/images/imagesHome/KingdomComeDeliverance.png",
+                                name: "Kingdom Come Deliverance II",
+                                price: "UAH 1030"
+                            },
+                            {
+                                imageSrc: "/images/imagesHome/FinalFantasy.png",
+                                name: "Final Fantasy VII",
+                                price: "UAH 975"
+                            }
+                        ]}
+                    />
                 </section>
                 <section>
                     <Fortnite
@@ -923,41 +662,10 @@ export function Main() {
                     />
                 </section>
                 <section>
-                    <LastNavigation
-                        previousArrowImg="/images/imagesHome/Vector_4.png"
-                        nextArrowImg="/images/imagesHome/Vector_3.png"
-                        pageLinks={[
-                            { href: "#", text: "1" },
-                            { href: "#", text: "2" },
-                            { href: "#", text: "3" },
-                            { href: "#", text: "4" },
-                            { href: "#", text: "5" },
-                            { href: "#", text: "6" },
-                            { href: "#", text: "..." },
-                            { href: "#", text: "198" }
-                        ]}
-                    />
+                    <LastNavigation></LastNavigation>
                 </section>
             </main>
-            <footer>
-                <Footer
-                    facebookImg="/images/imagesFooter/facebook.png"
-                    twitterImg="/images/imagesFooter/twitter.png"
-                    youtubeImg="/images/imagesFooter/youtube.png"
-                    arrowImg="images/imagesFooter/arrow.png"
-                    logoImg="images/imagesFooter/logo.png"
-                    footerText="© 2025 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries. VAT included in all prices where applicable"
-                    footerLinks={[
-                        { href: "#", text: "Terms of service" },
-                        { href: "#", text: "Jobs" },
-                        { href: "#", text: "Rules" },
-                        { href: "#", text: "Contracts" },
-                        { href: "#", text: "Gift cards" },
-                        { href: "#", text: "Facebook" },
-                        { href: "#", text: "Twitter" }
-                    ]}
-                />
-            </footer>
+            <Footer></Footer>
         </div>
     );
 }
