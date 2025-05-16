@@ -348,7 +348,7 @@ export function NowOnTheStore(props) {
 export function Main() {
     return (
         <div className="body">
-            <Header></Header>
+            <Header />
             <main>
                 <section>
                     <ApexLegends
@@ -665,7 +665,7 @@ export function Main() {
                     <LastNavigation></LastNavigation>
                 </section>
             </main>
-            <Footer></Footer>
+            <Footer />
         </div>
     );
 }
