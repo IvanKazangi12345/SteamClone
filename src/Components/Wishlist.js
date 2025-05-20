@@ -1,77 +1,136 @@
-import { useState, props, useEffect } from "react";
+import { useState } from "react";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 import './Wishlist.css';
 
-export function Wishlist() {
+function WishlistGameCard({ game }) {
     return (
-        <div id="wrapped">
-            <div id="myWishlistDiv">
-                <h1 id="myWishlistH1">My Wishlist</h1>
-                <p id="costP">UAH 0.00</p>
+        <div id="wishlistGameDivq">
+            <div id="imgTextDivq">
+                <img id="imgMyWishlistq" src={game.coverSrc} alt="Game Cover" />
+                <div id="baseGameDivq">
+                    <p id="baseGamePq">{game.type}</p>
+                    <h5>{game.title}</h5>
+                    <div id="firstPDivq">
+                        <p className="mainPq">All Reviews:</p>
+                        <p className="mainGreenPq">{game.reviews}</p>
+                    </div>
+                    <div id="secondPDivq">
+                        <p className="mainPq">Release Date</p>
+                        <p className="mainPq">{game.releaseDate}</p>
+                    </div>
+                    <div id="smallLogoPlatformsq">
+                        {game.platforms.map((src, i) => (
+                            <img
+                                key={i}
+                                src={src}
+                                alt="Platform logo"
+                                id={i === 1 ? "macLogoSmallq" : undefined}
+                            />
+                        ))}
+                    </div>
+                </div>
             </div>
-            <div id="mainInfDiv">
-                <div id="notificationDiv">
-                    <div id="greenNotificationDiv">
-                        <p>!</p>
-                    </div>
-                    <div id="mailSwitchDiv">
-                        <div id="mailNotificationDiv">
-                            <img src="/imgForMyWishlistPage/imgIconMainGreen.png"></img>
-                            <p id="notificationP">Get notified when your wishlisted games go on sale, or are available for purchase or pre-purchase.</p>
-                        </div>
-                        <label class="switch">
-                            <input type="checkbox" id="toggleSwitch"></input>
-                            <span class="slider round">
-                                <span class="text"></span>
-                            </span>
-                        </label>
-                    </div>
-                </div>
-                <div id="sortSaleStartDiv">
-                    <div id="sortSaleDiv">
-                        <p id="sortP">Sort by:</p>
-                        <p id="saleP">On Sale</p>
-                        <img id="arrowDownImg" src='/imgForSupportPage/tabler-icon-chevron-right.png'></img>
-                    </div>
-                </div>
-                <div id="wishlistGameDiv">
-                    <div id="imgTextDiv">
-                        <img id="imgMyWishlist" src="/imgForMyCartPage/coverPictureGame.png"></img>
-                        <div id="baseGameDiv">
-                            <p id="baseGameP">Base Game</p>
-                            <h5>The End of the Sun</h5>
-                            <div id="firstPDiv">
-                                <p class="mainP">All Reviews:</p>
-                                <p class="mainGreenP">Mostly Positive</p>
-                            </div>
-                            <div id="secondPDiv">
-                                <p class="mainP">Release Date</p>
-                                <p class="mainP">20.05.2025</p>
-                            </div>
-                            <div id="smallLogoPlatforms">
-                                <img src="/imgForMyCartPage/windowsLogoSmall.png"></img>
-                                <img id="macLogoSmall" src="/imgForMyCartPage/macLogoSmall.png"></img>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="endDiv">
-                        <p id="smallCostP">UAH 0.00</p>
-                        <div id="thirdPDiv">
-                            <p class="mainGreyP">Remove</p>
-                            <button class="mainLeftButton">Add to Cart</button>
-                        </div>
-                    </div>
+            <div id="endDivq">
+                <p id="smallCostPq">{game.price}</p>
+                <div id="thirdPDivq">
+                    <p className="mainGreyPq">Remove</p>
+                    <button className="mainLeftButtonq">Add to Cart</button>
                 </div>
             </div>
         </div>
     );
 }
 
+function WishlistHeader({ totalPrice }) {
+    return (
+        <div id="myWishlistDivq">
+            <h1 id="myWishlistH1q">My Wishlist</h1>
+            <p id="costPq">UAH {totalPrice}</p>
+        </div>
+    );
+}
 
+function WishlistNotification() {
+    return (
+        <div id="notificationDivq">
+            <div id="greenNotificationDivq">
+                <p>!</p>
+            </div>
+            <div id="mailSwitchDivq">
+                <div id="mailNotificationDivq">
+                    <img src="/images/imagesWishlist/imgIconMainGreen.png" alt="Notification Icon" />
+                    <p id="notificationP">
+                        Get notified when your wishlisted games go on sale, or are available for purchase or pre-purchase.
+                    </p>
+                </div>
+                <label className="switch">
+                    <input type="checkbox" id="toggleSwitch" />
+                    <span className="slider round">
+                        <span className="text"></span>
+                    </span>
+                </label>
+            </div>
+        </div>
+    );
+}
 
- 
+function WishlistSort() {
+    return (
+        <div id="sortSaleStartDivq">
+            <div id="sortSaleDivq">
+                <p id="sortPq">Sort by:</p>
+                <p id="salePq">On Sale</p>
+                <img id="arrowDownImgq" src="/images/imagesWishlist/tabler-icon-chevron-right.png" alt="Arrow" />
+            </div>
+        </div>
+    );
+}
 
+function WishlistContent({ games }) {
+    return (
+        <>
+            {games.map((game, index) => (
+                <WishlistGameCard key={index} game={game} />
+            ))}
+        </>
+    );
+}
 
+export function Wishlist() {
+    const games = [
+        {
+            title: "The End of the Sun",
+            type: "Base Game",
+            reviews: "Mostly Positive",
+            releaseDate: "20.05.2025",
+            coverSrc: "/images/imagesWishlist/coverPictureGame.png",
+            platforms: [
+                "/images/imagesWishlist/windowsLogoSmall.png",
+                "/images/imagesWishlist/macLogoSmall.png"
+            ],
+            price: "UAH 0.00"
+        }
+    ];
 
+    const totalPrice = "0.00";
 
+    return (
+        <div id="wrapped">
+            <Header />
+            <main>
+                <div id="wrapwq">
+                    <div id="wrappedq">
+                        <div id="mainInfWishlistDivq">
+                            <WishlistHeader totalPrice={totalPrice} />
+                            <WishlistNotification />
+                            <WishlistSort />
+                            <WishlistContent games={games} />
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <Footer />
+        </div>
+    );
+}

@@ -1,46 +1,23 @@
-* {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-
-
-html,
-body {
-    margin: 0;
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    padding: 0;
-    width: 100%;
-    background: linear-gradient(100.23deg, rgba(0, 0, 0, 0) 7.43%, rgba(123, 199, 77, 0.1) 92.57%),
-        linear-gradient(0deg, var(--Color-3, #222831), var(--Color-3, #222831));
-}
-
-.bodyF {
-    display: flex;
-    flex-direction: column;
-}
-
-
 /*-------Заголовок и сумма-------*/
 
-#myWishlistDiv {
+#myWishlistDivq {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     max-width: 1141px;
     width: 100%;
+    margin-bottom: 15px;
 }
 
-#myWishlistH1 {
+#myWishlistH1q {
     color: white;
     font-weight: 900;
     font-size: 48px;
     margin: 0;
 }
 
-#costP {
+#costPq {
     margin: 0;
     border: 1px solid white;
     border-radius: 20px;
@@ -53,16 +30,17 @@ body {
 
 
 /*-------Главная часть-------*/
-#mainInfDiv {
+#mainInfWishlistDivq {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     max-width: 1140px;
     width: 100%;
     margin-top: 31px;
 }
 
-#notificationDiv {
+#notificationDivq {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -73,7 +51,7 @@ body {
     border-radius: 7px;
 }
 
-#greenNotificationDiv {
+#greenNotificationDivq {
     display: flex;
     background-color: #7BC74D;
     border-top-left-radius: 7px;
@@ -87,12 +65,12 @@ body {
     font-size: 21.21px;
 }
 
-#divForNav {
+#divForNavq {
     display: flex;
     justify-content: center;
 }
 
-#mailNotificationDiv {
+#mailNotificationDivq {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -103,7 +81,7 @@ body {
     font-size: 14px;
 }
 
-#mailSwitchDiv {
+#mailSwitchDivq {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -136,7 +114,7 @@ body {
     bottom: 0;
     background-color: #222831;
     border: 1px solid #222831;
-    transition: .2s;
+    transition: .1s;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -151,10 +129,10 @@ body {
     width: 19px;
     left: 2px;
     top: 3px;
-    bottom:2px;
+    bottom: 2px;
     background-color: #606976;
     border: 1px solid #606976;
-    transition: .2s;
+    transition: .1s;
 }
 
 input:checked+.slider {
@@ -174,23 +152,23 @@ input:checked+.slider:before {
 
 .slider .text {
     pointer-events: none;
-    transition: all 0.2s ease;
+    transition: all 0.1s ease;
     position: relative;
 }
 
 input:not(:checked)+.slider .text::before {
     content: "OFF";
-    margin-left: 10.25px;
+    margin-left: 7.25px;
     margin-right: 0;
 }
 
 input:checked+.slider .text::before {
     content: "ON";
     margin-left: 0;
-    margin-right: 10.25px;
+    margin-right: 66.25px;
 }
 
-#sortSaleDiv {
+#sortSaleDivq {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -198,7 +176,7 @@ input:checked+.slider .text::before {
     width: 143px;
 }
 
-#sortSaleStartDiv {
+#sortSaleStartDivq {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -208,23 +186,23 @@ input:checked+.slider .text::before {
     margin-bottom: 24px;
 }
 
-#sortP,
-#saleP {
+#sortPq,
+#salePq {
     font-weight: 400;
     font-size: 16px;
     color: #EEEEEE;
 }
 
-#sortP {
+#sortPq {
     opacity: 80%;
 }
 
-#arrowDownImg {
+#arrowDownImgq {
     width: 18px;
     transform: rotate(90deg);
 }
 
-#wishlistGameDiv {
+#wishlistGameDivq {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -235,16 +213,16 @@ input:checked+.slider .text::before {
     border-radius: 7px;
 }
 
-#imgTextDiv {
+#imgTextDivq {
     display: flex;
     flex-direction: row;
 }
 
-#imgMyWishlist {
+#imgMyWishlistq {
     margin-right: 24px;
 }
 
-#baseGameP {
+#baseGamePq {
     color: #EEEEEE;
     background-color: #4E555F;
     font-size: 12px;
@@ -262,8 +240,8 @@ h5 {
     margin: 0;
 }
 
-#firstPDiv,
-#secondPDiv {
+#firstPDivq,
+#secondPDivq {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -272,43 +250,43 @@ h5 {
     width: 100%;
 }
 
-#firstPDiv {
+#firstPDivq {
     margin-top: 19px;
 }
 
-#secondPDiv {
+#secondPDivq {
     margin-top: 8px;
 }
 
-.mainP,
-.mainGreenP {
+.mainPq,
+.mainGreenPq {
     font-size: 16px;
     font-weight: 400;
     margin: 0;
 }
 
 
-.mainGreyP,
-.mainLeftButton {
+.mainGreyPq,
+.mainLeftButtonq {
     font-size: 16px;
     font-weight: 500;
     margin: 0;
 }
 
-.mainP {
+.mainPq {
     color: #EEEEEE;
 }
 
-.mainGreenP,
-.mainGreyP:hover {
+.mainGreenPq,
+.mainGreyPq:hover {
     color: #7BC74D;
 }
 
-.mainGreyP {
+.mainGreyPq {
     color: #CACBCC;
 }
 
-.mainLeftButton {
+.mainLeftButtonq {
     width: 112px;
     height: 39px;
     border: none;
@@ -321,19 +299,19 @@ h5 {
     cursor: pointer;
 }
 
-.mainLeftButton:hover {
+.mainLeftButtonq:hover {
     filter: brightness(130%);
 }
 
-#smallLogoPlatforms {
+#smallLogoPlatformsq {
     margin-top: 19px;
 }
 
-#macLogoSmall {
+#macLogoSmallq {
     margin-left: 9.59px;
 }
 
-#smallCostP {
+#smallCostPq {
     margin: 0;
     margin-top: -3px;
     font-size: 16px;
@@ -341,7 +319,7 @@ h5 {
     color: #EEEEEE;
 }
 
-#thirdPDiv {
+#thirdPDivq {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -349,7 +327,7 @@ h5 {
     margin-bottom: 10px;
 }
 
-#endDiv {
+#endDivq {
     display: flex;
     width: 239px;
     height: 161px;
@@ -359,70 +337,158 @@ h5 {
     margin-right: 10px;
 }
 
-@media (max-width: 441px) {
-    #wrapped {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+#wrappedq {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+    #wrappedq {
+        scale: 0.8 0.8;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    #wrappedq {
+        scale: 0.66 0.66;
+        margin-top: -80px;
+    }
+}
+
+@media (max-width: 767px) {
+    #wrappedq {
+        scale: 0.8 0.8;
     }
 
-    #myWishlistDiv {
-        flex-direction: column;
-        align-items: flex-start;
-        width: 408px;
-        margin: 0;
+    #notificationP {
+        width: 240px;
     }
-    #imgTextDiv{    
-        width: 366px;
+
+    #greenNotificationDivq {
+        height: 69px;
     }
-    #costP {
-        margin-top: 20px;
+
+    #notificationDivq {
+        width: 405px;
+        height: 70px;
     }
-    #mainInfDiv {
+
+    #myWishlistDivq {
+        width: 420px;
+        margin-left: -23px;
+        margin-bottom: 15px;
+        flex-wrap: wrap;
+        margin-top: -130px;
+    }
+
+    #myCartDivq {
+        width: 495px;
+        margin-top: -0px;
+    }
+
+    #myWishlistH1q {
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    #sortSaleStartDivq {
+        width: 400px;
+    }
+
+    #imgMyCartq {
+        width: 136px;
+        margin-right: 34px;
+    }
+
+    #mainInfDivq {
         flex-direction: column;
         align-items: center;
         margin-top: 43px;
-        width: 408px;
+        width: 396px;
     }
-    #wishlistGameDiv {
+
+    #wishlistGameDivq {
         flex-direction: column;
         align-items: center;
         width: 408px;
-        height: 327px;
+        height: 307px;
         border-radius: 7px;
         gap: 20px;
         margin-right: 0px;
-        padding: 24px 0px 0px 0px;
+        padding: 13px 0px 13px 0px;
     }
-    #mailNotificationDiv {
-        width: 390px;
+
+    #checkOutButtonq {
+        max-width: 100%;
     }
-    #notificationDiv {
-        max-width: 408px;
+
+    
+
+    #mailNotificationDivq {
+        width: 280px;
     }
-    #notificationP {
-        margin-left: 5px;
+
+    #imgTextDivq {
+        flex-direction: row;
+        width: 370px;
+        height: 180px;
+        margin-top: 5px;
     }
-    #greenNotificationDiv {
-        width: 45px;
-        height: 79px;
+
+    #endDivq {
+        margin-left: 130px;
+        height: 91px;
     }
-    #sortSaleStartDiv {
-        width: 408px;
+
+    #totalTaxDivq {
+        max-width: 400px;
+        margin: 4px 0px 4px 0px;
     }
-    #mailNotificationDiv {
-        width: 267px;
+
+    #totalDivq,
+    #taxDivq,
+    #textTaxPq {
+        max-width: 400px;
     }
+
+    #textTaxPq {
+        margin-bottom: 5px;
+    }
+
+    #checkOutButtonq {
+        width: 400px;
+    }
+
+    #baseGameDivq {
+        margin-right: 10px;
+    }
+
+    #imgMyWishlistq {
+        width: 136px;
+        margin-right: 34px;
+    }
+
     h5 {
         margin-top: 3px;
         font-weight: 700;
-        font-size: 22px;
+        font-size: 24px;
     }
-    #imgTextDiv {
-        flex-direction: row;
+
+    #easyLine::before {
+        content: "";
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        height: 2px;
+        width: 400px;
+        background: #393E46;
     }
-    #endDiv {
-        margin-left: 110px;
-        height: 91px;
+}
+
+@media (max-width: 440px) {
+    #wrappedq {
+        scale: 0.7 0.7;
+        margin-top: -50px;
     }
 }

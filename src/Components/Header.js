@@ -133,9 +133,9 @@ export function Navigation(props) {
 
                 {isMobile && isOpen && (
                     <div className="burgerMenu">
-                        <a href={discoverLink} className="burgerLink">Discover</a>
-                        <a href={supportLink} className="burgerLink">Support</a>
-                        <a href={newsLink} className="burgerLink">News</a>
+                        <Link to="/main" className="burgerLink">Discover</Link>
+                        <Link to="/support" className="burgerLink">Support</Link>
+                        <Link to="/news" className="burgerLink">News</Link>
                         <button id="downloadBurger">{downloadText}</button>
                     </div>
                 )}
