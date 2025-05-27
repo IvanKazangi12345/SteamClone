@@ -1,0 +1,135 @@
+import { useState } from "react";
+
+function ModalContent() {
+    const [topChecked, setTopChecked] = useState(false);
+    const [bottomChecked, setBottomChecked] = useState(false);
+    const topBlockHeight = 50; // Высота первого блока (в пикселях), например 50px
+
+    return (
+        <div className="modal-content">
+            {/* Левый фиксированный контейнер */}
+            <div className="left-container">
+                {/* Первый блок с чекбоксом */}
+                <div className="checkbox-block">
+                    <input
+                        type="checkbox"
+                        checked={topChecked}
+                        onChange={() => setTopChecked(!topChecked)}
+                    />
+                </div>
+
+                {/* Второй блок с чекбоксом */}
+                <div
+                    className="checkbox-block"
+                    style={{
+                        marginTop: topChecked ? `${topBlockHeight + 10}px` : '10px'
+                    }}
+                >
+                    <input
+                        type="checkbox"
+                        checked={bottomChecked}
+                        onChange={() => setBottomChecked(!bottomChecked)}
+                    />
+                    {/* Вложенный блок появляется только при активации нижнего чекбокса */}
+                    {bottomChecked && <div className="nested-block"></div>}
+                </div>
+            </div>
+        </div>
+    );
+}
+
+
+export function CartSummary({ total, taxPercent }) {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    return (
+        <>
+            <div id="totalTaxDiv">
+                <div id="totalDiv">
+                    <p id="totalP">Total:</p>
+                    <p id="UAHP">{total} UAH</p>
+                </div>
+                <div id="taxDiv">
+                    <p className="taxprecentP">Tax:</p>
+                    <p className="taxprecentP">{taxPercent}%</p>
+                </div>
+                <p id="textTaxP">
+                    Of their respective owners in the US and other countries. VAT included in all prices where applicable
+                </p>
+
+                <button id="checkOutButton" onClick={() => setIsModalOpen(true)}>Check Out</button>
+            </div>
+
+            {isModalOpen && (
+                <div className="modal-overlay">
+                    <div className="modal-content">
+                        <ModalContent></ModalContent>
+                        <button className="modal-close" onClick={() => setIsModalOpen(false)}>&times;</button>
+                    </div>
+                </div>
+            )}
+        </>
+    );
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 219px;
+    padding-bottom: 60px;
+    /* ← сюда добавили отступ от футера */
+    overflow-y: auto;
+    /* ← позволяет скроллить контент модалки */
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+
+.modal-content {
+    width: 90vw;
+    max-width: 921px;
+    aspect-ratio: 921 / 642;
+    max-height: calc(100vh - 219px - 60px);
+    height: auto;
+    overflow: auto;
+    background-color: #EEEEEE;
+    position: relative;
+    display: flex;
+}
+
+
+.modal-close {
+    width: 100px;
+    height: 100px;
+}
+
+.modal-close:hover {
+    color: #000;
+}
+
+.left-container {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 520px;
+    height: 543px;
+
+}
+
+.checkbox-block {
+    width: 520px;
+    height: 50px;
+    background-color: #393E46;
+}
+
+.nested-block {
+    width: 520px;
+    height: 433px;
+}
+

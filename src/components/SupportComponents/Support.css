@@ -1,0 +1,325 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Roboto, sans-serif;
+    background: linear-gradient(100.23deg, rgba(0, 0, 0, 0) 7.43%, rgba(123, 199, 77, 0.1) 92.57%),
+        linear-gradient(0deg, var(--Color-3, #222831), var(--Color-3, #222831));
+
+}
+
+#supportFindDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+#supportH1 {
+    color: white;
+    font-weight: 900;
+    font-size: 48px;
+    margin-bottom: 31.1px;
+}
+
+.findDiv {
+    flex: 1;
+    width: 100%;
+    max-width: 676px;
+    height: 45px;
+    border: 1px solid #EEEEEE;
+    border-radius: 24px;
+    padding: 7px 10px;
+    background-color: #393E46;
+    display: flex;
+    align-items: center;
+}
+
+
+.findLens {
+    margin-right: 8px;
+}
+
+.findInput {
+    font-size: 18px;
+    background: none;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #EEEEEE;
+}
+
+.findInput::placeholder {
+    color: #EEEEEE;
+}
+
+#wrapped {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#questionsDiv {
+    margin-top: 36.9px;
+
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: 500;
+    max-height: max-content;
+}
+
+.arrow {
+    transition: transform 0.4s ease;
+    width: 48px;
+}
+
+.arrowButton {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    outline: none;
+    display: inline-flex;
+    justify-content: end;
+    width: 48px;
+}
+
+.arrowButton:focus .arrow {
+    transform: rotate(90deg);
+}
+
+.pDiv {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+.pDiv.open {
+    max-height: 500px;
+    padding-top: 8px;
+    padding-bottom: 16px;
+}
+
+.extraP {
+    display: none;
+    color: #EEEEEEB2;
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 4px;
+     width: 1080px;
+    letter-spacing: 0.5px;
+}
+
+.arrowButton:focus+.pDiv {
+    max-height: 177px;
+}
+
+.arrowButton:focus+.pDiv .extraP {
+    display: block;
+}
+
+.headerDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.answerDiv {
+    background-color: #393E46;
+    color: #EEEEEE;
+    width: 100%;
+    font-size: 20px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    padding: 22px 0px 22px 0px;
+    margin-bottom: 12px;
+}
+
+#pagesDiv {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+#arrowSmallLeft,
+#arrowSmallRight {
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+#arrowSmallRight {
+    width: 24px;
+    height: 24px;
+}
+
+.textLinksA,
+.textLinksAGreen,
+.textLinksA-adaptive {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 20px;
+}
+
+.textLinksA,
+.textLinksA-adaptive {
+    color: #EEEEEE;
+}
+
+.textLinksAGreen {
+    color: #7BC74D;
+}
+
+.textLinksA:hover,
+.textLinksA-adaptive:hover {
+    color: #7BC74D;
+}
+
+#contactDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 171px;
+    margin-bottom: 61px;
+}
+
+h3 {
+    color: white;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+#contactButton {
+    cursor: pointer;
+    width: 402px;
+    height: 88px;
+    background-color: #7BC74D;
+    color: #222831;
+    border: none;
+    border-radius: 7px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+    #questionsDiv {
+        scale: 0.8 0.8;
+        margin-bottom: -60px;
+    }
+
+    #contactDiv {
+        scale: 0.8 0.8;
+        margin-top: 30px;
+        margin-bottom: -20px;
+    }
+
+    #supportFindDiv {
+        scale: 0.8 0.8;
+        margin-top: -30px;
+        margin-bottom: -95px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    #questionsDiv {
+        scale: 0.6 0.6;
+        margin-bottom: -210px;
+    }
+
+    #contactDiv {
+        scale: 0.6 0.6;
+        margin-top: 60px;
+        margin-bottom: -100px;
+    }
+
+    #supportFindDiv {
+        scale: 0.6 0.6;
+        margin-bottom: -190px;
+        margin-top: -50px;
+    }
+}
+
+@media (max-width: 767px) {
+    #questionsDiv {
+        scale: 0.6 0.6;
+        margin-top: -235px;
+        margin-bottom: -190px;
+        width: 165%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+     }
+     
+     .answerDiv {
+        width: 640px;
+     }
+
+    #contactDiv {
+        scale: 0.6 0.6;
+        margin-top: 70px;
+        margin-bottom: -90px;
+    }
+
+    #supportFindDiv {
+        display: none;
+    }
+     #extraP {
+        max-width: 100px;
+     }
+}
+
+@media (max-width: 440px) {
+    #questionsDiv {
+        scale: 0.6 0.6;
+        margin-top: -225px;
+        margin-bottom: -205px;
+        width: 185%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+     }
+
+     #extraP {
+        max-width: 100px;
+     }
+     
+     .answerDiv {
+        width: 495px;
+     }
+
+    #contactDiv {
+        scale: 0.6 0.6;
+        margin-top: 60px;
+        margin-bottom: -100px;
+    }
+
+    #supportFindDiv {
+        display: none;
+    }
+}

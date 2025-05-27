@@ -1,0 +1,369 @@
+.navBack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 9999;
+  left: 0;
+  background: linear-gradient(90deg, #373C43 0%, #25282D 100%);
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+}
+
+.lastElements {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 350px;
+  height: 39px;
+  gap: 20px;
+  margin-right: 18px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 111px;
+}
+
+.logo>img {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.lastElements>:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-width: 2px;
+}
+
+.lastElements>:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-width: 2px;
+}
+
+.lastElements>:nth-child(3) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-width: 2px;
+}
+
+.lastElements>:nth-child(4) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-width: 2px;
+}
+
+#signIn {
+  width: 72px;
+  height: 39px;
+  gap: 8.2px;
+  border-radius: 4.1px;
+  padding: 10px;
+  background: #393E46;
+  color: #EEEEEE;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+#signIn:hover,
+#download:hover {
+  filter: brightness(130%);
+}
+
+#download {
+  width: 97px;
+  height: 39px;
+  gap: 8.2px;
+  border-radius: 4.1px;
+  padding: 10px;
+  font-family: Roboto;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  background: #7BC74D;
+  color: #222831;
+  border: none;
+  cursor: pointer;
+}
+
+.firstElements {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 273px;
+}
+
+.logoWithFirstElements {
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.DSN {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0.5px;
+  text-align: center;
+  vertical-align: middle;
+  color: #EEEEEE;
+  cursor: pointer;
+}
+
+.DSN:hover {
+  color: #7BC74D;
+}
+
+.searchDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 275px;
+  height: max-content;
+  gap: 10px;
+  border-radius: 20px;
+  padding-top: 10px;
+  padding-right: 12px;
+  padding-bottom: 10px;
+  padding-left: 12px;
+  background: #393E46;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.DREDGE {
+  font-size: 14px;
+}
+
+.aAndInput {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  margin-left: 15 px;
+}
+
+#logoLens {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 17px;
+  height: 19px;
+  cursor: pointer;
+}
+
+#logoLens>img {
+  width: 14px;
+  height: 14px;
+  border-width: 1px;
+}
+
+.search {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  background: none;
+  border: none;
+  width: 100%;
+  height: 19px;
+  color: #EEEEEE;
+}
+
+.search:focus {
+  outline: none;
+}
+
+.search:focus::placeholder {
+  color: transparent;
+}
+
+.search::placeholder {
+  color: #EEEEEEBF;
+}
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .navBack {
+    height: 50px;
+  }
+
+  .lastElements {
+    width: 304px;
+    scale: 0.8 0.8;
+  }
+
+  .logoWithFirstElements {
+    width: 0px;
+    margin: 0;
+    margin-left: 20px;
+    scale: 0.8 0.8;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .navBack {
+    height: 50px;
+  }
+
+  .lastElements {
+    width: 274px;
+    scale: 0.7 0.7;
+    margin: 0;
+    margin-right: 20px;
+  }
+
+  .logoWithFirstElements {
+    width: 0px;
+    margin: 0;
+    margin-left: 20px;
+    scale: 0.7 0.7;
+  }
+}
+
+@media (max-width: 767px) {
+  .lastElements {
+    width: 217px;
+    scale: 0.7 0.7;
+  }
+
+  .logoWithFirstElements {
+    margin-left: 20px;
+    width: 0px;
+    scale: 0.7 0.7;
+  }
+
+  .burger {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  .burger .line {
+    width: 25px;
+    height: 3px;
+    background: white;
+  }
+
+  .burgerMenu {
+    position: fixed;
+    width: 120px;
+    height: 250px;
+    top: 70px;
+    right: 20px;
+    background: #2c2c2c;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  }
+
+  .burgerMenu a,
+  .burgerMenu button {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 16px;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  #downloadBurger {
+    width: 97px;
+    height: 39px;
+    border-radius: 4.1px;
+    padding: 10px;
+    gap: 8.2px;
+    background: #7BC74D;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #222831;
+  }
+
+  #downloadBurger:hover {
+    filter: brightness(130%);
+  }
+
+  .burgerLink:hover {
+    color: #7BC74D;
+  }
+
+  .searchDivMobile {
+    display: flex;
+    flex-direction: row;
+    width: 279px;
+    gap: 10px;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-right: 12px;
+    padding-bottom: 10px;
+    padding-left: 12px;
+    background: #393E46;
+    margin-top: 80px;
+  }
+
+  #signIn {
+    width: 72px;
+    height: 39px;
+    border-radius: 4.1px;
+    padding: 10px;
+    gap: 8.2px;
+    background: #7BC74D;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #222831;
+  }
+
+  .navBack {
+    height: 50px;
+    margin-top: -80px;
+  }
+}

@@ -1,0 +1,415 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+input {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+input:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 
+    Фон 
+*/
+
+.wloginMain {
+     width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(#222831 10%, #7BC74D 300%),
+        url('/public/imgForLoginPage/backgroundImgLoginPage.png');
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    background-position: center;
+    background-size: 100vw;
+}
+
+.backEmbLoginPage {
+    margin-left: 19px;
+    margin-top: 39px;
+}
+
+.backEmbLoginPageLink {
+    height: 26px;
+    width: 20px;
+    position: absolute;
+    left: 0px;
+}
+
+/* 
+    Основное
+*/
+
+.mainLoginPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 45px;
+    width: 900px;
+    margin-left: -100px;
+}
+
+.mainLoginText {
+    max-width: 150px;
+    width: 100%;
+    height: 42px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: #EEEEEE;
+}
+
+.loginValidation {
+    max-width: 1043px;
+    width: 100%;
+    height: 420px;
+    padding: 43px 70px 0px 42px;
+    border-radius: 20px;
+    background: linear-gradient(#2B2F35 10%, #25282D 70%);
+}
+
+.inputsPasswordLogin {
+    max-width: 769px;
+    width: 100%;
+}
+
+/* 
+    Внутрености блока
+*/
+
+.chooseYourInput {
+    display: flex;
+    gap: 63px;
+}
+
+.loginInputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 35px;
+    width: 587px;
+}
+
+.inputWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.inputHeader {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 3px;
+}
+
+.loginText {
+    line-height: 100%;
+    font-weight: 700;
+    font-size: 16px;
+    color: #EEEEEE;
+    opacity: 0.8;
+    height: 16px;
+}
+
+.errorText {
+    color: #C74D4D;
+    height: 16px;
+    line-height: 100%;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.errorSignText {
+    color: #C74D4D;
+    height: 16px;
+    line-height: 100%;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.loginInput {
+    max-width: 749px;
+    width: 100%;
+    height: 61px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #60697666;
+    color: #606976;
+    padding: 0 10px;
+}
+
+.loginInput.error {
+    border: 1px solid #C74D4D;
+}
+
+/* 
+    Кнопки    
+*/
+
+.loginBtnAndLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.signOrHelp {
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+    max-width: 769px;
+    width: 100%;
+}
+
+.loginSignBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 487px;
+    width: 100%;
+    height: 83px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #7BC74D 40%, #82CA77 80%);
+    border: none;
+}
+
+
+.loginLinkSignIn {
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+}
+
+.loginSignBtn .loginSignTextInBtn {
+    width: 85px;
+    height: 21px;
+    opacity: 0.8;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: #222831;
+}
+
+.loginSignBtn:hover {
+    filter: brightness(110%);
+    text-decoration-color: gray;
+}
+
+.loginSignBtn:hover .loginSignTextInBtn {
+    color: #EEEEEE;
+    opacity: 0.5;
+    filter: brightness(110%);
+}
+
+
+.loginHelpBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 237px;
+    height: 83px;
+    border-radius: 5px;
+    background-color: #393E46;
+    border: none;
+}
+
+.loginHelpBtn .loginHelpTextInBtn {
+    width: 227px;
+    height: 21px;
+    opacity: 0.6;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: #EEEEEE;
+}
+
+.loginHelpBtn:hover {
+    filter: brightness(120%);
+}
+
+/* 
+    Ссылка на регестрацию
+*/
+
+.noLoginAccount {
+    width: 88px;
+    height: 19px;
+    opacity: 0.7;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: #EEEEEE;
+    margin-left: 22px;
+}
+
+.createAccountLink {
+    margin-top: 9px;
+    width: 148px;
+    height: 19px;
+    opacity: 0.85;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    color: #EEEEEE;
+}
+
+/* 
+    Зона Qr-кода
+*/
+
+.QrCodeDiv {
+    margin-top: 15px;
+    max-width: 230px;
+    height: 351px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signInWithQr {
+    max-width: 187px;
+    width: 100%;
+    height: 19px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: #7BC74D;
+    margin-bottom: 15px;
+}
+
+.signInWithQrBot {
+    width: 100%;
+    max-width: 220px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: center;
+    color: #EEEEEE;
+    opacity: 0.7;
+    margin-top: 30px;
+}
+
+/* 
+    Аддаптив
+*/
+
+@media (max-width: 440px) {
+
+    .wloginMain {
+        height: 996px;
+    }
+
+    .mainLoginPage {
+        margin-left: 16px;
+        gap: 15px;
+    }
+
+    .backEmbLoginPage {
+        margin-top: 26px;
+        margin-left: 26px;
+    }
+
+    .mainLoginText {
+        margin-top: 16px;
+        margin-left: 115px;
+    }
+
+    .loginValidation {
+        width: 326px;
+        height: 770px;
+        padding: 40px 41px 40px 41px;
+    }
+
+    .loginInputs {
+        width: 326px;
+    }
+
+    .chooseYourInput {
+        gap: 34px;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0px;
+    }
+
+    .errorSignText {
+        display: none;
+    }
+
+    .signInWithQrBot {
+        margin-top: 15px;
+    }
+
+    .loginLinkSignIn {
+        width: 175px;
+    }
+
+    .loginHelpBtn {
+        width: 116px;
+        display: flex;
+    }
+
+    .loginHelpTextInBtn {
+        margin-bottom: 17px;
+    }
+
+}

@@ -1,0 +1,1198 @@
+  * {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+  }
+
+  html {
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(100.23deg, rgba(0, 0, 0, 0) 7.43%, rgba(123, 199, 77, 0.1) 92.57%),
+      linear-gradient(0deg, var(--Color-3, #222831), var(--Color-3, #222831));
+  }
+
+  .body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .ApexLegends {
+    display: flex;
+    width: 100%;
+  }
+
+  .mainHead {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 1142px;
+    padding-top: 104px;
+    padding-bottom: 270px;
+  }
+
+  .ApexLegendsNewSeason {
+    width: 100%;
+  }
+
+  .ApexLegendsNewSeason>h2 {
+    width: 175px;
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #eeeeee;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+
+  .ApexLegendsNewSeason>p {
+    display: inline;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 100%;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+    color: #eeeeee;
+    margin-top: -15px;
+  }
+
+  #ApexOpenPhoto {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    cursor: pointer;
+  }
+
+  .ApexLegendsNewSeason {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 370px;
+    padding: 27px 24px 33px 30px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: linear-gradient(#373C43, #25282D);
+  }
+
+  .ApexLegendsNewSeason>img {
+    width: 316px;
+    height: 160px;
+  }
+
+  #FreeLM {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #FreeLM>p {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+    color: #7BC74D;
+  }
+
+  .ApexLegendsButton {
+    width: 107px;
+    height: 39px;
+    border-radius: 4.1px;
+    border-style: none;
+    padding: 10px;
+    color: #222831;
+    background-color: #7BC74D;
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .ApexLegendsButton:hover {
+    filter: brightness(130%)
+  }
+
+  .DiscoverSomethingNew>h2 {
+    margin-bottom: 24px;
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0.5px;
+    color: #EEEEEE;
+  }
+
+  .imgAndText>p {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+    color: #EEEEEEB2;
+    margin-top: 9px;
+  }
+
+  .name {
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    list-style-type: none;
+    color: #EEEEEE;
+    margin-top: 8px;
+    width: 175px;
+  }
+
+  .card>ul>.price {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+    color: #EEEEEE;
+    margin-top: 14px;
+  }
+
+  .DiscoverSomethingNew {
+    margin-top: 70px;
+  }
+
+  .cards {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .cardsB {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+  }
+
+  .cardB {
+    width: 369px;
+  }
+
+  .dealsImg {
+    width: 369px;
+    height: 207px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .dealsImg:hover {
+    filter: brightness(140%);
+  }
+
+  .nameOfGame {
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+    color: #EEEEEE;
+    margin-top: 22px;
+    cursor: pointer;
+  }
+
+  .description {
+    width: 369px;
+    height: max-content;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 100%;
+    letter-spacing: 0.5px;
+    color: #EEEEEEB2;
+    margin-top: 22px;
+    margin-bottom: 22px;
+  }
+
+  .FortniteButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 135px;
+    height: 44px;
+    gap: 5px;
+    border-radius: 4.1px;
+    padding: 10px;
+    background-color: #393E46;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+    color: #EEEEEE;
+    border-style: none;
+    cursor: pointer;
+  }
+
+  .FortniteButton:hover {
+    filter: brightness(120%);
+  }
+
+  .WinterSaleSpotlight>h2 {
+    margin-bottom: 24px;
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0.5px;
+    color: #EEEEEE;
+  }
+
+  .WinterSaleSpotlight {
+    margin-top: 70px;
+  }
+
+  .percentOfSale {
+    width: 45;
+    height: 23;
+    border-radius: 20px;
+    padding-top: 4px;
+    padding-right: 5px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    border-radius: 20px;
+    background-color: #7BC74D;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .sale {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-decoration: line-through 2px #EEEEEEB2;
+    color: #EEEEEEB2;
+  }
+
+  .cost {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 14px;
+  }
+
+  .salePrice {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+
+  .salePrice>.price {
+    width: max-content;
+    height: 19px;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: right;
+    vertical-align: middle;
+    color: #EEEEEE;
+    margin-top: 2px;
+  }
+
+  #TMNTSF {
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0.5px;
+    width: 348px;
+    height: 46px;
+    margin-top: 29px;
+  }
+
+  #LHA {
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0.5px;
+    width: 348px;
+    height: 23px;
+    margin-top: 29px;
+  }
+
+  #DDV {
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0.5px;
+    width: 348px;
+    height: 23px;
+    margin-top: 29px;
+  }
+
+  #LHASalePrice {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #DDVSalePrice {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #TMNTSFSalePrice {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #DealsOfTheWeek {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 33px;
+  }
+
+  .saleM {
+    margin-left: 10px;
+    margin-top: -1px;
+  }
+
+  .priceM {
+    margin-left: 10px;
+  }
+
+  #FreeGamesBackground {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 441px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, #393E46 0%, #25282D 100%);
+    margin-top: 70px;
+  }
+
+  .discoverImg {
+    cursor: pointer;
+  }
+
+  .card>ul>.name {
+    cursor: pointer;
+  }
+
+  .discoverImg:hover {
+    filter: brightness(150%);
+  }
+
+  .cardsF {
+    display: flex;
+    justify-content: space-between;
+    width: 1052px;
+    height: 294px;
+  }
+
+  .cardF {
+    width: 340px;
+    height: 294px;
+  }
+
+  .fImg:hover {
+    filter: brightness(130%);
+  }
+
+  .FreeGames {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1052px;
+    height: 50px;
+    padding: 23px 44px 36px 44px;
+  }
+
+  .FreeGames>img {
+    width: 37.5px;
+    height: 37.5px;
+    border-width: 2px;
+  }
+
+  .FreeGames>div {
+    display: flex;
+    align-items: center;
+  }
+
+  .FreeGames>div>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+  }
+
+  .FreeName {
+    font-family: Roboto;
+    width: 210px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    margin: 22px 0px 0px 0px;
+  }
+
+  #FreeDescription {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    margin: 7px 0px 0px 0px;
+  }
+
+  .FreeGames>div>p {
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #EEEEEE;
+    margin-left: 17px;
+  }
+
+  .FreeGames>button {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.5px;
+    text-align: center;
+    width: 102px;
+    height: 37px;
+    opacity: 0.8;
+    gap: 8.2px;
+    border-radius: 4.1px;
+    border-color: #EEEEEE;
+    border-width: 1.5px;
+    padding: 10px;
+    background: none;
+    color: #EEEEEE;
+  }
+
+  .FreeGames>button:hover {
+    background: #606869;
+  }
+
+  #StoreOpenPhoto {
+    width: 698px;
+    height: 392px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .VisionStoreMobile {
+    display: flex;
+    align-items: center;
+    margin-top: 70px;
+  }
+
+  .VisionStoreMobileInfo>div>:nth-child(1) {
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+    color: #EEEEEE;
+  }
+
+  .VisionStoreMobileInfo>div>:nth-child(2) {
+    width: 369px;
+    height: 57px;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    color: #EEEEEEB2;
+    margin-top: 10px;
+  }
+
+  .VisionStoreMobileInfo>div {
+    width: 369px;
+    height: 95px;
+  }
+
+  #buttomVis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 165px;
+    height: 40px;
+    gap: 8.2px;
+    border-radius: 4.1px;
+    border: none;
+    padding-top: 10px;
+    padding-right: 16px;
+    padding-bottom: 10px;
+    padding-left: 16px;
+    background: #7BC74D;
+    color: #222831;
+    margin-top: 29px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    cursor: pointer;
+  }
+
+  .VisionStoreMobileInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 57px;
+  }
+
+  .TopSellers {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .TopSellers::after {
+    display: block;
+    height: 100px;
+    width: 20px;
+    background: white;
+    margin-left: 100px;
+  }
+
+  .MostPlayed {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .TopUpcomingWishlisted {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title>div>img {
+    margin-left: 14px;
+    cursor: pointer;
+  }
+
+  .title>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 17px;
+    margin-left: 17px;
+  }
+
+  .title>p {
+    font-family: Roboto;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+    cursor: pointer;
+  }
+
+  .general {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 761px;
+    margin-top: 70px;
+  }
+
+  .lineW::before {
+    content: "";
+    display: block;
+    height: 753px;
+    width: 2px;
+    background: #393E46;
+  }
+
+  .content>img {
+    width: 94px;
+    height: 126px;
+    border-radius: 7px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .cardT {
+    width: 343px;
+    height: 126px;
+    gap: 29px;
+    border-radius: 7px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: 9px;
+    margin-right: 17px;
+    cursor: pointer;
+  }
+
+  .cardT:hover {
+    background: #acb6c260;
+  }
+
+  .cardsTopSellers {
+    margin-left: 17px;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 29px;
+  }
+
+  .text>:nth-child(1) {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 100%;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+    color: #EEEEEE;
+    margin-bottom: 11px;
+  }
+
+  .text>:nth-child(2) {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 100%;
+    letter-spacing: 0.5px;
+    text-align: right;
+    vertical-align: middle;
+    color: #EEEEEE;
+  }
+
+  .salePriceT {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    ;
+  }
+
+  #saleT {
+    color: #222831;
+  }
+
+  .costT {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .PopularGames {
+    margin-top: 70px;
+  }
+
+  .PopularGames>h2 {
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #EEEEEE;
+    margin-bottom: 24px;
+  }
+
+  .NowOnTheStore {
+    margin-top: 70px;
+  }
+
+  .NowOnTheStore>h2 {
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #EEEEEE;
+    margin-bottom: 24px;
+  }
+
+  .RecentlyUpdated {
+    margin-top: 70px;
+  }
+
+  .RecentlyUpdated>h2 {
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #EEEEEE;
+    margin-bottom: 24px;
+  }
+
+  .LastNavigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    width: 429px;
+    height: 24px;
+    gap: 22px;
+    margin-top: 61px;
+    margin-bottom: 61px;
+  }
+
+  .pages {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    width: 232px;
+    height: 23px;
+    gap: 17px;
+  }
+
+  .pages>a {
+    font-family: Roboto;
+    height: 21px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 0%;
+    color: #EEEEEE;
+  }
+
+  .pages>:nth-child(1) {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 0%;
+    color: #7BC74D;
+  }
+
+  .pages>a:hover {
+    color: #7BC74D;
+  }
+
+  .arrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .arrow:hover {
+    text-decoration: underline;
+  }
+
+  #arrowPrevious {
+    width: 91px;
+    height: 24px;
+    opacity: 0.7;
+    gap: 4px;
+    text-decoration-color: #EEEEEEB2;
+  }
+
+  #arrowNext {
+    width: 62px;
+    height: 24px;
+    gap: 4px;
+    text-decoration-color: #EEEEEE;
+  }
+
+  #arrowPrevious>a {
+    margin-left: 13px;
+  }
+
+  #arrowNext>a {
+    margin-right: 13px;
+  }
+
+  .arrow>a {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    letter-spacing: 0.5px;
+    color: #EEEEEE;
+  }
+
+  .wrapLastNavigation {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: max-content;
+  }
+
+  @media (min-width: 1024px) and (max-width: 1366px) {
+
+    .ApexLegends {
+      scale: 0.8 0.8;
+      margin: -60px 0px 0px;
+    }
+
+    .wrapLastNavigation {
+      scale: 0.8 0.8;
+      margin: -40px 0px -60px 0px;
+    }
+
+    .NowOnTheStore {
+      scale: 0.8 0.8;
+      margin: -20px 0px 0px;
+    }
+
+    .RecentlyUpdated {
+      scale: 0.8 0.8;
+      margin: -20px 0px 0px;
+    }
+
+    .PopularGames {
+      scale: 0.8 0.8;
+      margin: -40px 0px 0px;
+    }
+
+    .general {
+      scale: 0.8 0.8;
+      margin: -40px 0px 0px;
+    }
+
+    .VisionStoreMobile {
+      scale: 0.8 0.8;
+      margin: -40px 0px 0px;
+    }
+
+    #FreeGamesBackground {
+      scale: 0.8 0.8;
+      margin: -40px 0px 0px;
+    }
+
+    .cardsB {
+      scale: 0.8 0.8;
+      margin: -20px 0px 0px;
+    }
+
+    .WinterSaleSpotlight {
+      scale: 0.8 0.8;
+      margin: -20px 0px 0px;
+    }
+
+    .DiscoverSomethingNew {
+      scale: 0.8 0.8;
+      margin: -40px 0px 0px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+
+    .ApexLegends {
+      scale: 0.6 0.6;
+      margin: -130px 0px 0px;
+    }
+
+    .wrapLastNavigation {
+      scale: 0.6 0.6;
+      margin: 0px 0px -130px 0px;
+    }
+
+    .NowOnTheStore {
+      scale: 0.6 0.6;
+      margin: -100px 0px -100px 0px;
+    }
+
+    .RecentlyUpdated {
+      scale: 0.6 0.6;
+      margin: -100px 0px 0px;
+    }
+
+    .PopularGames {
+      scale: 0.6 0.6;
+      margin: -180px 0px 0px;
+    }
+
+    .general {
+      scale: 0.6 0.6;
+      margin: -180px 0px 0px;
+    }
+
+    .VisionStoreMobile {
+      scale: 0.6 0.6;
+      margin: -120px 0px 0px;
+    }
+
+    #FreeGamesBackground {
+      scale: 0.6 0.6;
+      margin: -100px 0px 0px;
+    }
+
+    .cardsB {
+      scale: 0.6 0.6;
+      margin: -90px 0px 0px;
+    }
+
+    .WinterSaleSpotlight {
+      scale: 0.6 0.6;
+      margin: -110px 0px 0px;
+    }
+
+    .DiscoverSomethingNew {
+      scale: 0.6 0.6;
+      margin: -140px 0px -30px 0px;
+    }
+  }
+
+  @media (max-width: 767px) {
+
+    .ApexLegends {
+      display: none;
+    }
+
+    .wrapLastNavigation {
+      scale: 0.6 0.6;
+      margin: 0px 0px -130px 0px;
+    }
+
+    .NowOnTheStore {
+      scale: 0.6 0.6;
+      margin: -100px 0px -90px 0px;
+    }
+
+    .RecentlyUpdated {
+      scale: 0.6 0.6;
+      margin: -110px 0px 0px;
+    }
+
+    .PopularGames {
+      scale: 0.6 0.6;
+      margin: -180px 0px 0px;
+    }
+
+    .VisionStoreMobile {
+      display: none;
+    }
+
+    .cardsB {
+      scale: 0.6 0.6;
+      margin: -90px 0px 0px;
+    }
+
+    .WinterSaleSpotlight {
+      scale: 0.6 0.6;
+      margin: -110px 0px 0px;
+    }
+
+    .DiscoverSomethingNew {
+      scale: 0.6 0.6;
+      margin: -140px 0px -20px 0px;
+    }
+
+    .FreeGames {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 540px;
+      height: 50px;
+      padding: 23px 44px 36px 44px;
+    }
+
+    #FreeGamesBackground {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 651px;
+      height: 1600px;
+      border-radius: 20px;
+      background: linear-gradient(180deg, #393E46 0%, #25282D 100%);
+      scale: 0.6 0.6;
+      margin: -340px 0px -210px;
+    }
+
+    .FreeName {
+      font-size: 23px;
+      width: 100%;
+    }
+
+    #FreeDescription {
+      font-size: 18px;
+    }
+
+    .cardF>img {
+      width: 540px;
+    }
+
+    .FreeGames>button {
+      width: 122px;
+      height: 57px;
+      border-radius: 5px;
+      border-width: 2.5px;
+      font-size: 19px;
+    }
+
+    .cardsF {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 540px;
+      height: 1304px;
+    }
+
+    #center {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .general {
+      scale: 0.7 0.7;
+      margin: -150px 0px 40px 0px;
+    }
+
+    .cardsB {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      overflow-y: hidden;
+      gap: 20px;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    #scrollWidth {
+      width: 700px;
+    }
+
+    #scrollWidthGeneral {
+      width: 600px;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      overflow-y: hidden;
+      gap: 20px;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .card {
+      scroll-snap-align: start;
+      will-change: transform;
+      backface-visibility: hidden;
+    }
+
+    .general {
+      display: flex;
+      overflow-x: auto;
+      overflow-y: hidden;
+      gap: 20px;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .cardsTopSellers {
+      scroll-snap-align: start;
+      will-change: transform;
+      backface-visibility: hidden;
+    }
+
+    .cardB {
+      scroll-snap-align: start;
+      will-change: transform;
+      backface-visibility: hidden;
+    }
+
+    .cardsB::-webkit-scrollbar,
+    .cards::-webkit-scrollbar,
+    .general::-webkit-scrollbar {
+      display: none;
+    }
+
+  }
+
+  @media (max-width: 440px) {
+    #scrollWidth {
+      width: 500px;
+    }
+
+    #scrollWidthGeneral {
+      width: 400px;
+    }
+
+    .FreeGames {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 370px;
+      height: 50px;
+      padding: 23px 44px 36px 44px;
+    }
+
+    .cardsF {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 390px;
+      height: 1024px;
+    }
+
+    .cardF>img {
+      width: 390px;
+    }
+
+    #FreeGamesBackground {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 451px;
+      height: 1210px;
+      border-radius: 20px;
+      background: linear-gradient(180deg, #393E46 0%, #25282D 100%);
+      scale: 0.6 0.6;
+      margin: -260px 0px -160px;
+    }
+    
+    .FreeGames>button {
+      width: 102px;
+      height: 47px;
+      border-radius: 5px;
+      border-width: 2.5px;
+      font-size: 15px;
+    }
+  }

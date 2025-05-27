@@ -1,0 +1,306 @@
+/* 
+---------------------------
+    Основные настройки
+--------------------------- 
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: Roboto;
+}
+
+.allPage {
+    margin-top: 106px;
+    margin-bottom: 276px;
+    }
+
+/* 
+---------------------------
+    Заголовок и два больших блока 
+--------------------------- 
+*/
+
+.sectionForTwoBigNewsCards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#wrapperWE {
+    display: flex;
+    justify-content: center;
+
+}
+
+.titleRelevantNews {
+    width: 322px;
+    height: 56px;
+    font-family: Roboto;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: bottom;
+    color: #FFFFFF;
+    margin-bottom: 31px;
+}
+
+.titleNewsDiv {
+    max-width: 1124px;
+    max-height: 737px;
+    height: 100%;
+    width: 100%;
+    margin-top: 0px;
+
+}
+
+/* 
+---------------------------
+     2 Большие карты
+--------------------------- 
+*/
+
+.twoBigNewsCard {
+    max-width: 1124px;
+    max-height: 537px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    gap: 16px;
+}
+
+.firstBigNewsCard {
+    max-width: 562px;
+    width: 100%;
+    max-height: 537px;
+    height: 100%;
+}
+
+.dateOfpushNews {
+    margin-top: 19px;
+    width: 177px;
+    height: 21px;
+    opacity: 0.8;
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #EEEEEE;
+}
+
+.cardTitleNews {
+    width: 562;
+    height: 46;
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #EEEEEE;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.textNews-container {
+    position: relative;
+    width: max-content;
+    line-height: 1.5em;
+    max-height: 4.5em;
+    overflow: hidden;
+    mask-image: linear-gradient(to bottom, black 99%, rgba(0, 0, 0, 0.3) 90%, transparent 90%);
+    -webkit-mask-image: linear-gradient(to bottom, black 20%, rgba(0, 0, 0, 0.3) 55%, transparent 90%);
+}
+
+.textNews {
+    max-width: 400px;
+    width: 100%;
+    height: 48px;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #EEEEEE;
+    opacity: 70%;
+    margin-bottom: 10px;
+}
+
+.newsLink {
+    width: 83px;
+    height: 19px;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 5%;
+    text-decoration-skip-ink: auto;
+    position: relative;
+    color: #EEEEEE;
+}
+
+.newsLink:hover {
+    color:#7BC74D;
+}
+
+
+.hr {
+    max-width: 1140px;
+    width: 100%;
+    border-width: 1px;
+    color: #EEEEEE66;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    opacity: 40%;
+}
+
+/* 
+------------------------------------------
+    Новости - Маленькие карточки
+----------------------------------------
+*/
+
+.sectionForSmallNewsCards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+/* Блоки */
+
+.smallCardsBlockTwo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.smallCardNews {
+    display: flex;
+    gap: 22px;
+}
+
+/* блок */
+
+.dateOfpushSmallNews {
+    max-width: 177px;
+    width: 100%;
+    height: 21px;
+    opacity: 0.8;
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #EEEEEE;
+    margin-bottom: 30px;
+}
+
+.smallCardTitleNews {
+    max-width: 369px;
+    width: 100%;
+    height: 69px;
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #EEEEEE;
+    margin-bottom: 20px;
+}
+
+.smallTextNews-container {
+    position: relative;
+    width: max-content;
+    line-height: 1.5em;
+    max-height: 4.5em;
+    overflow: hidden;
+    mask-image: linear-gradient(to bottom, black 99%, rgba(0, 0, 0, 0.3) 90%, transparent 90%);
+    -webkit-mask-image: linear-gradient(to bottom, black 10%, rgba(0, 0, 0, 0.3) 35%, transparent 90%);
+}
+
+.smallTextNews {
+    width: 369px;
+    height: 48px;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #EEEEEE;
+    opacity: 0.8;
+    margin-bottom: 15px;
+}
+
+.smallNewsLink {
+    width: 83px;
+    height: 19px;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 0%;
+    text-decoration-skip-ink: auto;
+    color: #EEEEEE;
+}
+
+.smallNewsLink:hover {
+    color: #7BC74D;
+}
+
+
+@media (max-width: 440px) {
+    .twoBigNewsCard {
+        display: none;
+    }
+
+    .titleRelevantNews {
+        display: none;
+    }
+
+    .smallCardNews {
+        max-width: 378px;
+        margin-left: -340px;
+    }
+
+    .smallCardTitleNews {
+        width: 267px;
+        height: 69px;
+        font-family: Roboto;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        vertical-align: middle;
+    }
+
+    .smallTextNews {
+        width: 267px;
+        height: 64px;
+        font-family: Roboto;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 0%;
+    }
+
+    .imgInSmallCard {
+        width: 124px;
+        height: 228px;
+    }
+}

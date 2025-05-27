@@ -1,0 +1,120 @@
+.cardAchievements {
+    display: flex;
+    align-items: center;
+    height: 121px;
+    margin-bottom: 15px;
+}
+
+#backAchievements {
+    width: 100vw;
+}
+
+#headAchievements>:nth-child(1) {
+    font-family: Roboto;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #EEEEEE;
+    margin-bottom: 15px;
+}
+
+#wrapping {
+    display: flex;
+    justify-content: center;
+}
+
+#headAchievements>:nth-child(2) {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #EEEEEECC;
+    margin-bottom: 30px;
+}
+
+#textAchievements>:nth-child(1) {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #EEEEEE;
+    margin-bottom: 8px;
+}
+
+#textAchievements>:nth-child(2) {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #EEEEEECC;
+}
+
+#textAchievements {
+    margin-right: 21px;
+}
+
+#textAndProcentAchievements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px 0px 20px;
+    width: 100%;
+    min-width: 240px;
+    height: 100%;
+    border: 1.5px solid var(--Color-5, #606976);
+    border-radius: 0px 9px 9px 0px;
+    background: linear-gradient(90deg, #393E46 95%, #222831 95%, #222831 100%);
+}
+
+#textAndProcentAchievements>p {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #7BC74D;
+}
+
+.cardAchievementsImg {
+    border: 1.5px solid;
+    border-radius: 9px 0px 0px 9px;
+    border-color: var(--Color-5, #606976);
+}
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+    #backAchievements {
+        scale: 0.8 0.8;
+        margin: -180px 0px -130px 0px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    #backAchievements {
+        scale: 0.6 0.6;
+        margin: -340px 0px -350px 0px;
+    }
+}
+
+@media (max-width: 767px) {
+    #backAchievements {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        max-width: 1600px;
+        min-width: 700px;
+        scale: 0.6 0.6;
+        margin: -390px 0px -350px 0px;
+    }
+}
+
+@media (max-width: 440px) {
+    #backAchievements {
+        width: 480px;
+        min-width: 480px;
+       
+    }
+}

@@ -1,0 +1,494 @@
+/*-------Заголовок и сумма-------*/
+
+#myWishlistDivq {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1141px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#myWishlistH1q {
+    color: white;
+    font-weight: 900;
+    font-size: 48px;
+    margin: 0;
+}
+
+#costPq {
+    margin: 0;
+    border: 1px solid white;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 900;
+    padding: 4px 12px 6px 12px;
+    color: #EEEEEE;
+    background-color: #60697633;
+}
+
+
+/*-------Главная часть-------*/
+#mainInfWishlistDivq {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1140px;
+    width: 100%;
+    margin-top: 31px;
+}
+
+#notificationDivq {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1140px;
+    width: 100%;
+    background-color: #393E46;
+    border-radius: 7px;
+}
+
+#greenNotificationDivq {
+    display: flex;
+    background-color: #7BC74D;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    width: 18px;
+    height: 55px;
+    align-items: center;
+    justify-content: center;
+    color: #EEEEEE;
+    font-weight: 500;
+    font-size: 21.21px;
+}
+
+#divForNavq {
+    display: flex;
+    justify-content: center;
+}
+
+#mailNotificationDivq {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 653px;
+    color: #EEEEEE;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+#mailSwitchDivq {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 1122px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 66.75px;
+    height: 29.25px;
+    font-family: sans-serif;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #222831;
+    border: 1px solid #222831;
+    transition: .1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #606976;
+    font-size: 9.25px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 2px;
+    top: 3px;
+    bottom: 2px;
+    background-color: #606976;
+    border: 1px solid #606976;
+    transition: .1s;
+}
+
+input:checked+.slider {
+    border: 1px solid #7BC74D;
+    color: #7BC74D;
+}
+
+input:checked+.slider:before {
+    transform: translateX(37px);
+    border: 1px solid #7BC74D;
+}
+
+.slider.round,
+.slider.round:before {
+    border-radius: 15px;
+}
+
+.slider .text {
+    pointer-events: none;
+    transition: all 0.1s ease;
+    position: relative;
+}
+
+input:not(:checked)+.slider .text::before {
+    content: "OFF";
+    margin-left: 7.25px;
+    margin-right: 0;
+}
+
+input:checked+.slider .text::before {
+    content: "ON";
+    margin-left: 0;
+    margin-right: 66.25px;
+}
+
+#sortSaleDivq {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 143px;
+}
+
+#sortSaleStartDivq {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 1140px;
+    margin-top: 30px;
+    margin-bottom: 24px;
+}
+
+#sortPq,
+#salePq {
+    font-weight: 400;
+    font-size: 16px;
+    color: #EEEEEE;
+}
+
+#sortPq {
+    opacity: 80%;
+}
+
+#arrowDownImgq {
+    width: 18px;
+    transform: rotate(90deg);
+}
+
+#wishlistGameDivq {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 1100px;
+    background-color: #393E46;
+    padding: 17px 20px 17px 20px;
+    border-radius: 7px;
+}
+
+#imgTextDivq {
+    display: flex;
+    flex-direction: row;
+}
+
+#imgMyWishlistq {
+    margin-right: 24px;
+}
+
+#baseGamePq {
+    color: #EEEEEE;
+    background-color: #4E555F;
+    font-size: 12px;
+    font-weight: 400;
+    border-radius: 4px;
+    padding: 2px 7px 4px 7px;
+    width: 62px;
+    margin: 0;
+}
+
+h5 {
+    color: white;
+    font-weight: 900;
+    font-size: 24px;
+    margin: 0;
+}
+
+#firstPDivq,
+#secondPDivq {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 255px;
+    width: 100%;
+}
+
+#firstPDivq {
+    margin-top: 19px;
+}
+
+#secondPDivq {
+    margin-top: 8px;
+}
+
+.mainPq,
+.mainGreenPq {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+}
+
+
+.mainGreyPq,
+.mainLeftButtonq {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.mainPq {
+    color: #EEEEEE;
+}
+
+.mainGreenPq,
+.mainGreyPq:hover {
+    color: #7BC74D;
+}
+
+.mainGreyPq {
+    color: #CACBCC;
+}
+
+.mainLeftButtonq {
+    width: 112px;
+    height: 39px;
+    border: none;
+    border-radius: 4px;
+    margin-left: 33px;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: #7BC74D;
+    color: #222831;
+    cursor: pointer;
+}
+
+.mainLeftButtonq:hover {
+    filter: brightness(130%);
+}
+
+#smallLogoPlatformsq {
+    margin-top: 19px;
+}
+
+#macLogoSmallq {
+    margin-left: 9.59px;
+}
+
+#smallCostPq {
+    margin: 0;
+    margin-top: -3px;
+    font-size: 16px;
+    font-weight: 900;
+    color: #EEEEEE;
+}
+
+#thirdPDivq {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#endDivq {
+    display: flex;
+    width: 239px;
+    height: 161px;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+
+#wrappedq {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+    #wrappedq {
+        scale: 0.8 0.8;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    #wrappedq {
+        scale: 0.66 0.66;
+        margin-top: -80px;
+    }
+}
+
+@media (max-width: 767px) {
+    #wrappedq {
+        scale: 0.8 0.8;
+    }
+
+    #notificationP {
+        width: 240px;
+    }
+
+    #greenNotificationDivq {
+        height: 69px;
+    }
+
+    #notificationDivq {
+        width: 405px;
+        height: 70px;
+    }
+
+    #myWishlistDivq {
+        width: 420px;
+        margin-left: -23px;
+        margin-bottom: 15px;
+        flex-wrap: wrap;
+        margin-top: -130px;
+    }
+
+    #myCartDivq {
+        width: 495px;
+        margin-top: -0px;
+    }
+
+    #myWishlistH1q {
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    #sortSaleStartDivq {
+        width: 400px;
+    }
+
+    #imgMyCartq {
+        width: 136px;
+        margin-right: 34px;
+    }
+
+    #mainInfDivq {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 43px;
+        width: 396px;
+    }
+
+    #wishlistGameDivq {
+        flex-direction: column;
+        align-items: center;
+        width: 408px;
+        height: 307px;
+        border-radius: 7px;
+        gap: 20px;
+        margin-right: 0px;
+        padding: 13px 0px 13px 0px;
+    }
+
+    #checkOutButtonq {
+        max-width: 100%;
+    }
+
+    
+
+    #mailNotificationDivq {
+        width: 280px;
+    }
+
+    #imgTextDivq {
+        flex-direction: row;
+        width: 370px;
+        height: 180px;
+        margin-top: 5px;
+    }
+
+    #endDivq {
+        margin-left: 130px;
+        height: 91px;
+    }
+
+    #totalTaxDivq {
+        max-width: 400px;
+        margin: 4px 0px 4px 0px;
+    }
+
+    #totalDivq,
+    #taxDivq,
+    #textTaxPq {
+        max-width: 400px;
+    }
+
+    #textTaxPq {
+        margin-bottom: 5px;
+    }
+
+    #checkOutButtonq {
+        width: 400px;
+    }
+
+    #baseGameDivq {
+        margin-right: 10px;
+    }
+
+    #imgMyWishlistq {
+        width: 136px;
+        margin-right: 34px;
+    }
+
+    h5 {
+        margin-top: 3px;
+        font-weight: 700;
+        font-size: 24px;
+    }
+
+    #easyLine::before {
+        content: "";
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        height: 2px;
+        width: 400px;
+        background: #393E46;
+    }
+}
+
+@media (max-width: 440px) {
+    #wrappedq {
+        scale: 0.7 0.7;
+        margin-top: -50px;
+    }
+}

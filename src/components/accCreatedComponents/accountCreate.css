@@ -1,0 +1,158 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+input {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+input:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+/* Фон */
+
+.createdMain {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(#222831 10%, #7BC74D 300%),
+        url('/public/imgForLoginPage/backgroundImgLoginPage.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+    position: relative;
+    display: flex;
+    background-position: center;
+    background-size: 100vw;
+}
+
+.backEmbLoginPage {
+    position: absolute;
+}
+
+#two {
+    margin-top: 21px;
+}
+
+.createdDiv {
+    margin: auto;
+    text-align: center;
+    color: white;
+    width: 572px;
+}
+
+.mainCreateDiv {
+    max-width: 577px;
+    width: 100%;
+    height: 354px;
+    border-radius: 20px;
+    background: linear-gradient(#2B2F35 0%, #25282D 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.accCreatedH1 {
+    width: 100%;
+    height: 42px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.emailSentText {
+    width: 100%;
+    height: 21px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #EEEEEE;
+    text-align: center;
+    opacity: 0.8;
+    margin-top: 16px;
+}
+
+/* 
+    Кнопка
+*/
+
+.createdSignBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 487px;
+    width: 100%;
+    height: 83px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #7BC74D 40%, #82CA77 80%);
+    border: none;
+    margin-top: 60px;
+}
+
+.createdSignBtn .createdSignTextInBtn {
+    width: 85px;
+    height: 21px;
+    opacity: 0.8;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: #222831;
+}
+
+.createdSignBtn:hover {
+    filter: brightness(110%);
+    text-decoration-color: gray;
+}
+
+.createdSignBtn:hover .createdSignTextInBtn {
+    color: #EEEEEE;
+    opacity: 0.5;
+    filter: brightness(110%);
+}
+
+.toLoginLink{
+    max-width: 487px;
+    width: 100%;
+}
+
+/*  
+    Аддаптив
+*/
+
+@media (max-width: 440px) {
+    .mainCreateDiv{
+        margin-left: 10px;
+        max-width: 420px;
+    }
+
+    .mainCreatePage{
+        gap: 16px;
+    }
+
+    .createdSignBtn{
+        max-width: 347px;
+    }
+
+    .toLoginLink{
+        display: contents;
+    }
+
+    .checkAgeText{
+        width: 324px;
+    }
+}
