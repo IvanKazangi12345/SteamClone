@@ -17,7 +17,7 @@ function App() {
     <Router>
       <ScrollToTop />
       <Routes>
-        <Route path='/' element={<Navigate to='/main' replace />} />
+        <Route path='/' element={<Navigate to='/main'/>} />
         <Route path='/news' element={<RelevantNewsApp />} />
         <Route path='/login' element={<Login />} />
         <Route path='/create' element={<CreateAccPage />} />
